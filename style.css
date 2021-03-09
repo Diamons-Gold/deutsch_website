@@ -43,6 +43,7 @@ div {
 	color: var(--font-color);
 	border: solid var(--bg-third-color) 5px;
 	border-radius: 50px;
+	margin: 0;
 }
 
 h1 {
@@ -103,8 +104,9 @@ a {
 }
 
 img {
-  width: 100%;
-  height: auto;
+	height: 100%;
+	align-self: center;
+	margin: 20px;
 }
 
 .button {
@@ -125,4 +127,3 @@ img {
 .text {
 	display: block;
 }
-
