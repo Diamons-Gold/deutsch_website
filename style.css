@@ -103,10 +103,26 @@ a {
 }
 
 img {
+  width: 100%;
   height: auto;
 }
 
 .button {
-	margin: 0px;
-
+	display: contents;
 }
+
+#column {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+}
+
+#column div:nth-child(even) {
+	flex-direction: row-reverse;	
+}
+
+.text {
+	display: block;
+}
+
