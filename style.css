@@ -2,57 +2,70 @@
 
 :root {
 	/* dark-mode */
-	--bg-color: rgba(24,24,24,255);
-	--bg-sec-color: rgba(33,33,33,255);
+	--bg-color: rgb(24,24,24);
+	--bg-sec-color: rgb(33,33,33);
 	--bg-third-color: rgb(0,128,0);
-	--font-color: rgba(144,144,144,255);
-	--font-sec-color: rgba(255,255,255);
+	--font-color: rgb(144,144,144);
+	--font-sec-color: rgb(255,255,255);
 
 	/* white-mode */
 	--bg-color-white: rgb(255,255,255);
-	--bg-sec-color-white: rgba(249,249,249,255);
-	--font-color-white: rgba(50,50,50,255);
-	--font-sec-color-white: rgba(0,0,0);
+	--bg-sec-color-white: rgb(227,229,232);
+	--font-color-white: rgb(50,50,50);
+	--font-sec-color-white: rgb(0,0,0);
 
 }
 
 /* page section */
 
-* {
-	transition: 0.5s;
-}
 
 html {
 	font-family: sans-serif;
 	text-align: center;
 	background-color: var(--bg-color);
 	scroll-behavior: smooth;
-	transition: 0.5s;
+	transition: 0.75s;
 }
 
 body {
 	margin: 0px;
 }
 
+body:after {
+	content: "";
+	background: linear-gradient(127deg, #13FF00, var(--bg-third-color) 41.07%, #319197 76.05%);
+    clip-path: polygon(100% 0,0 0,0 77.5%,1% 77.4%,2% 77.1%,3% 76.6%,4% 75.9%,5% 75.05%,6% 74.05%,7% 72.95%,8% 71.75%,9% 70.55%,10% 69.3%,11% 68.05%,12% 66.9%,13% 65.8%,14% 64.8%,15% 64%,16% 63.35%,17% 62.85%,18% 62.6%,19% 62.5%,20% 62.65%,21% 63%,22% 63.5%,23% 64.2%,24% 65.1%,25% 66.1%,26% 67.2%,27% 68.4%,28% 69.65%,29% 70.9%,30% 72.15%,31% 73.3%,32% 74.35%,33% 75.3%,34% 76.1%,35% 76.75%,36% 77.2%,37% 77.45%,38% 77.5%,39% 77.3%,40% 76.95%,41% 76.4%,42% 75.65%,43% 74.75%,44% 73.75%,45% 72.6%,46% 71.4%,47% 70.15%,48% 68.9%,49% 67.7%,50% 66.55%,51% 65.5%,52% 64.55%,53% 63.75%,54% 63.15%,55% 62.75%,56% 62.55%,57% 62.5%,58% 62.7%,59% 63.1%,60% 63.7%,61% 64.45%,62% 65.4%,63% 66.45%,64% 67.6%,65% 68.8%,66% 70.05%,67% 71.3%,68% 72.5%,69% 73.6%,70% 74.65%,71% 75.55%,72% 76.35%,73% 76.9%,74% 77.3%,75% 77.5%,76% 77.45%,77% 77.25%,78% 76.8%,79% 76.2%,80% 75.4%,81% 74.45%,82% 73.4%,83% 72.25%,84% 71.05%,85% 69.8%,86% 68.55%,87% 67.35%,88% 66.2%,89% 65.2%,90% 64.3%,91% 63.55%,92% 63%,93% 62.65%,94% 62.5%,95% 62.55%,96% 62.8%,97% 63.3%,98% 63.9%,99% 64.75%,100% 65.7%);
+    z-index: -1;
+}
+
+body:after, body:before {
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
 header {
-	background-color: var(--bg-third-color);
 	display: flex;
 	justify-content: space-between;
 	position: static;
 	max-height: 100px;
+	background-color: rgba(24,24,24,0.25);
 }
 
 header img {
 	margin: 10px;
 	width: 9%;
+	border-radius: 25px;
 }
 
 section {
 	background-color: var(--bg-sec-color);
 	display: flex;
 	flex-direction: column;
-	margin-right: 10%;
-	margin-left: 10%;
+	margin: 5% 10%;
+	border-radius: 50px;
 }
 
 footer {
@@ -72,12 +85,14 @@ div {
 }
 
 h1 {
-	font-size: 45px;
-	font-family: fantasy;
+	font-size: 75px;
+	font-family: Arial;
+	line-height: 0px;
+	color: var(--font-sec-color);
 }
 
 h2 {
-	color: var(--font-sec-color);
+	color: var(--bg-third-color);
 }
 
 a {
@@ -87,16 +102,19 @@ a {
 button {
 	cursor: pointer;
 	border: none;
+	outline:none;
 }
 
 img {
 	height: 100%;
 	align-self: center;
 	margin: 20px;
+	border-radius: 25px;
 }
 
 video {
 	border-radius: 50px;
+	margin-top: 25px;
 	width: 75%;
 }
 
@@ -108,7 +126,7 @@ video {
 		margin-left: 0;
 	}
 
-	#theme, #up {
+	#menu ,#theme, #up {
 		display: none;
 	}
 }
@@ -132,17 +150,21 @@ video {
 	color: var(--font-color-white);
 }
 
-.white-mode h2 {
-	color: var(--font-sec-color-white);
-}
-
 .text {
 	flex-direction: column;
 	color: var(--font-color);
-	border: solid var(--bg-third-color) 5px;
-	border-radius: 50px;
 	margin: 0;
 	display: block;
+	text-align: left;
+}
+
+.title-audio {
+	text-align: left;
+	margin: 0;
+	margin-bottom: -10px;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
 }
 
 .button {
@@ -162,7 +184,7 @@ video {
 	flex-direction: row-reverse;	
 }
 
-#theme, #up {
+#menu, #theme, #up {
 	background-color: #333;
 	text-align: center;
 	font-size: 25px;
@@ -174,27 +196,34 @@ video {
 	margin: 0;
 }
 
-#theme:hover ,#theme:focus, #up:hover ,#up:focus {
+#audio:hover , #menu:hover , #theme:hover, #up:hover {
 	background-color: var(--bg-third-color);
 }
 
-#theme {
+#audio, #menu, #theme {
 	border-radius: 50%;
 	height: 50px;
-	bottom: 70%;
 	padding: 0;
-	letter-spacing: -2.5px;
+}
+
+#menu {
+	bottom: 70%;
+	z-index: 10;
+}
+
+#menu::before {
+	content: '≡';
+}
+
+#theme {
+	opacity: 0;
+	bottom: 70%;
 }
 
 #theme::before {
 	line-height: 50px;
+	letter-spacing: -2.5px;
 	content: '☽';
-}
-
-#theme:hover {
-	--bg-color: white;
-	--bg-sec-color: white;
-	--bg-third-color: rgb(0,128,0);
 }
 
 #up {
@@ -206,4 +235,26 @@ video {
 
 #up::before {
 	content: '∧';
+}
+
+#audio {
+	background-color: #333;
+	font-size: 25px;
+	transition: 0.75s;
+	color: var(--font-sec-color);
+	position: relative;
+	width: 50px;
+	margin: 0 0 25px 25px;
+	min-width: 50px;
+	top: 20px;
+}
+
+#audio img {
+	width: 25px;
+	height: 25px;
+	margin: 0;
+	position: absolute;
+	left: 13px;
+	bottom: 13px;
+	filter: invert(100%);
 }
