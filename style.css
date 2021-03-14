@@ -92,7 +92,6 @@ h1 {
 }
 
 h2 {
-	font-size: 3em;
 	color: var(--bg-third-color);
 }
 
@@ -125,6 +124,12 @@ video {
 	section {
 		margin-right: 0;
 		margin-left: 0;
+	}
+
+	h2 {	
+		font-size: 3em;
+		margin: 0;
+		margin-bottom: 10px;
 	}
 
 	#menu ,#theme, #up {
