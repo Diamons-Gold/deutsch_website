@@ -92,7 +92,7 @@ h1 {
 }
 
 h2 {
-	display: inline;
+	font-size: 3em;
 	color: var(--bg-third-color);
 }
 
