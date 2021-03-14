@@ -129,6 +129,10 @@ video {
 	#menu ,#theme, #up {
 		display: none;
 	}
+
+	#column > div {
+		flex-direction: column !important;
+	}
 }
 
 /* class */
