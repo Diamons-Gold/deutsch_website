@@ -110,12 +110,14 @@ img {
 	align-self: center;
 	margin: 20px;
 	border-radius: 25px;
+	max-height: 200px;
 }
 
 video {
 	border-radius: 50px;
 	margin-top: 25px;
 	width: 75%;
+	outline:none;
 }
 
 /* media queries */
