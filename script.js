@@ -15,8 +15,34 @@ function themeFunction() {
 	element.classList.toggle("white-mode");
 }
 
-function playAudio() { 
-	var y = document.getElementById("myAudio"); 
+function playAudio_1() { 
+	var y = document.getElementById("myAudio_1"); 
 	y.play(); 
 }
+
+function playAudio_2() { 
+	var y = document.getElementById("myAudio_2"); 
+	y.play(); 
+}
+
+function playAudio_3() { 
+	var y = document.getElementById("myAudio_3"); 
+	y.play(); 
+}
+
+function playAudio_4() { 
+	var y = document.getElementById("myAudio_4"); 
+	y.play(); 
+}
+
+function playAudio_5() { 
+	var y = document.getElementById("myAudio_5"); 
+	y.play(); 
+}
+
+function playAudio_6() { 
+	var y = document.getElementById("myAudio_6"); 
+	y.play(); 
+}
+
 
